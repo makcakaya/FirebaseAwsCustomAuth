@@ -3,7 +3,25 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27130.2036
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lambda", "Lambda\Lambda.csproj", "{7C209028-5127-4664-86A0-2AA4FA12AF84}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lambda.Tests", "Lambda.Tests\Lambda.Tests.csproj", "{BE026DC5-78AE-4984-A6AA-4A8F94589916}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7C209028-5127-4664-86A0-2AA4FA12AF84}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C209028-5127-4664-86A0-2AA4FA12AF84}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C209028-5127-4664-86A0-2AA4FA12AF84}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C209028-5127-4664-86A0-2AA4FA12AF84}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE026DC5-78AE-4984-A6AA-4A8F94589916}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE026DC5-78AE-4984-A6AA-4A8F94589916}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE026DC5-78AE-4984-A6AA-4A8F94589916}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE026DC5-78AE-4984-A6AA-4A8F94589916}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
