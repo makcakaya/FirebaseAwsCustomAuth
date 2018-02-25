@@ -12,7 +12,7 @@ namespace Lambda
 {
     public class Function
     {
-        public const string ProjectId = "markarar-android";
+        public const string ProjectId = "YOUR_FIREBASE_PROJECT_ID_HERE";
         private JwtValidator JwtService { get; } = new JwtValidator();
 
         /// <summary>
