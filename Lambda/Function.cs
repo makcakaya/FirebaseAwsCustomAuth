@@ -13,7 +13,7 @@ namespace Lambda
     public class Function
     {
         public const string ProjectId = "YOUR_FIREBASE_PROJECT_ID_HERE";
-        private JwtValidator JwtService { get; } = new JwtValidator();
+        private JwtValidator Validator { get; } = new JwtValidator();
 
         /// <summary>
         /// A simple function that takes the token authorizer and returns a policy based on the authentication token included.
@@ -36,7 +36,7 @@ namespace Lambda
                 // 1. Call out to OAuth provider
                 // 2. Decode a JWT token inline
                 // 3. Lookup in a self-managed DB
-                var result = JwtService.Validate(input.AuthorizationToken, ProjectId);
+                var result = Validator.Validate(input.AuthorizationToken, ProjectId);
                 if (!result.IsValid)
                 {
                     throw new Exception(result.ErrorMesage);
