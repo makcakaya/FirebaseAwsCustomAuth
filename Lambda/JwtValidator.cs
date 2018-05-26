@@ -48,6 +48,11 @@ namespace Lambda
 
         public JwtValidationResult Validate(string token, string projectId, IDictionary<string, string> issuerSigningKeys = null)
         {
+            if (string.IsNullOrEmpty(token))
+            {
+                return JwtValidationResult.Invalid("Token not supplied.");
+            }
+
             // Validate expiration and issued-at-time.
             var jwt = JwtHandler.ReadJwtToken(token ?? throw new ArgumentNullException(nameof(token)));
             var expOffset = DateTimeOffset.FromUnixTimeSeconds(jwt.Payload.Exp.Value);
