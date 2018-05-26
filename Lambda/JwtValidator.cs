@@ -53,6 +53,11 @@ namespace Lambda
                 return JwtValidationResult.Invalid("Token not supplied.");
             }
 
+            if (token.StartsWith("Bearer "))
+            {
+                token = token.Substring(7);
+            }
+
             // Validate expiration and issued-at-time.
             var jwt = JwtHandler.ReadJwtToken(token ?? throw new ArgumentNullException(nameof(token)));
             var expOffset = DateTimeOffset.FromUnixTimeSeconds(jwt.Payload.Exp.Value);
